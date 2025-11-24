@@ -9,6 +9,8 @@ Antigravity is a modern, full-stack chat application designed for interacting wi
 - **Markdown Support:** Renders LLM responses with Markdown, including code blocks and tables.
 - **Thought Process Visibility:** Special handling for `<think>` tags, collapsed by default and expandable by the user.
 - **Performance Monitoring:** Visual "traffic light" system to indicate LLM response latency.
+- **User Authentication:** Secure signup and login with JWT-based authentication.
+- **Customizable LLM Settings:** Adjust `Temperature` and `Top P` parameters per conversation or set global defaults.
 - **Extensible Backend:** Built with FastAPI for high performance and easy extension.
 
 ## 🛠️ Tech Stack
@@ -29,9 +31,19 @@ Antigravity is a modern, full-stack chat application designed for interacting wi
 
 ## 📦 Database Persistence
 
-The application stores conversations and messages in a SQLite database (or the configured DB). The `Conversation` and `Message` models are defined in `backend/models.py`. Each chat creates a conversation record, and each user/assistant exchange creates a `Message` linked to that conversation.
+The application stores conversations and messages in a SQLite database (or the configured DB). The `Conversation` and `Message` models are defined in `backend/models.py`.
+
+- **Users:** User data and preferences are stored in the `users` table.
+- **Conversations:** Linked to specific users via `user_id`.
+- **Messages:** Linked to conversations.
+
+This ensures that chat history is isolated and persistent for each user.
 
 ## 📡 API Endpoints
+
+- **POST `/api/auth/register`**: Register a new user with email, password, and optional default settings.
+- **POST `/api/auth/login`**: Authenticate and receive a JWT access token.
+- **GET `/api/auth/me`**: Retrieve current user profile and default settings.
 
 - **POST `/api/chat`**: Sends a user message and receives a streaming response. Accepts `message`, optional `history`, and optional `conversation_id`. Returns a Server‑Sent Events stream with assistant content and a final metadata event containing `conversation_id` and `response_time`.
 
@@ -122,6 +134,12 @@ Example `.env`:
 # Example configuration for local LM Studio
 LLM_BASE_URL="http://localhost:1234/v1"
 LLM_API_KEY="lm-studio"
+
+# Auth Configuration
+AUTH_SECRET_KEY="change-me-in-production"
+AUTH_ALGORITHM="HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+
 ```
 
 ## 📂 Project Structure
