@@ -13,6 +13,21 @@ Antigravity is a modern, full-stack chat application designed for interacting wi
 - **Customizable LLM Settings:** Adjust `Temperature` and `Top P` parameters per conversation or set global defaults.
 - **Extensible Backend:** Built with FastAPI for high performance and easy extension.
 
+## 📸 Screenshots
+
+| Login Page | Chat Interface |
+|:---:|:---:|
+| ![Login Page](docs/images/login.png) | ![Chat Interface](docs/images/chat_interface.png) |
+
+| Markdown Support | Thought Process |
+|:---:|:---:|
+| ![Markdown Support](docs/images/markdown_response.png) | ![Thought Process](docs/images/thought_process.png) |
+
+| Settings Panel |
+|:---:|
+| ![Settings Panel](docs/images/settings.png) |
+
+
 ## 🛠️ Tech Stack
 
 ### Frontend
