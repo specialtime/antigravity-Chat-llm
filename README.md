@@ -17,15 +17,15 @@ Antigravity is a modern, full-stack chat application designed for interacting wi
 
 | Login Page | Chat Interface |
 |:---:|:---:|
-| ![Login Page](docs/images/login.png) | ![Chat Interface](docs/images/chat_interface.png) |
+| ![Login Page](https://drive.google.com/file/d/1c6IrzpPuWeEWZIH5nm01c0XaRU7_Zkbb/view?usp=drive_link) | ![Chat Interface](https://drive.google.com/file/d/1R-uEHgRiFYk3YbWVA2Ir91HsSBdHdVui/view?usp=drive_link) |
 
 | Markdown Support | Thought Process |
 |:---:|:---:|
-| ![Markdown Support](docs/images/markdown_response.png) | ![Thought Process](docs/images/thought_process.png) |
+| ![Markdown Support](https://drive.google.com/file/d/1gvhUNv78phAEH2Ko0K5859EN55984fIx/view?usp=drive_link) | ![Thought Process](https://drive.google.com/file/d/11tcCXE6Q0fs48H-TrVcHYIxrHDH85Jon/view?usp=drive_link) |
 
 | Settings Panel |
 |:---:|
-| ![Settings Panel](docs/images/settings.png) |
+| ![Settings Panel](https://drive.google.com/file/d/1G8PYmaY0KohYvbNKO5DgP2Uo0YGC5so5/view?usp=drive_link) |
 
 
 ## 🛠️ Tech Stack
